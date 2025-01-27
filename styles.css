@@ -1,22 +1,26 @@
 body {
   position: relative;
   margin: auto;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
 header {
   background-image: url(img/background.jpg);
   background-position: center center;
-  padding: 3rem 0 0 8.45%;
+  padding: 3rem 0 1rem 8%;
 }
 
-div {
+.flex{
   display: flex;
   flex-wrap: wrap;
 }
 
 .menu>img {
   margin-right: 15rem;
+  width: 53px;
+  height: 80px;
 }
 
 
@@ -27,7 +31,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  margin: 0rem 3rem 0 3rem;
+  margin: 0rem 3rem;
   color: white;
   font-size: 1.125rem;
 }
@@ -62,7 +66,7 @@ nav a {
 
 .info>h1 {
   font-family: Showcard Gothic;
-  font-size: 1000%;
+  font-size: 10rem;
   line-height: 8rem;
   margin: 0;
 }
@@ -114,7 +118,7 @@ p {
 .device-senser {
   position: absolute;
   background: radial-gradient(farthest-corner at 20% 20%, #6074bf 0, transparent 40%),
-    radial-gradient(farthest-corner at 80% 80%, #513785 0, #24555e 20%, transparent 50%);
+              radial-gradient(farthest-corner at 80% 80%, #513785 0, #24555e 20%, transparent 50%);
   border-radius: 50%;
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, .05);
   height: 9px;
@@ -178,6 +182,10 @@ p {
   text-align: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 .control>button {
   margin: 2.5rem;
   width: 2.7rem;
@@ -186,6 +194,7 @@ p {
   border: #1a1a1a solid 2px;
   border-radius: 50%;
   box-shadow: 6px 0px 4.37rem #aeacb17e;
+  
 }
 
 .control>h3 {
@@ -288,10 +297,7 @@ progress {
 }
 
 .main_top section {
-  width: 100%;
-  margin: 0;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 .main_top section img {
@@ -310,12 +316,17 @@ progress {
 .alboms {
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .alboms>button {
-  background: linear-gradient(to right, rgba(20, 20, 20, 0.445)30%, rgba(255, 72, 0, 0.986)50%);
+  background: linear-gradient(to right, 
+            rgba(20, 20, 20, 0.445)30%, 
+            rgba(255, 72, 0, 0.986)50%);
+
   box-shadow: 3px 3px 10px 2px #1a1a1a,
-    -3px 0 10px 1px #ffffff4d;
+              -3px 0 10px 1px #ffffff4d;
+
   border: #2a292b;
   border-radius: 5px;
 
@@ -366,10 +377,15 @@ progress {
   margin: 5rem 0 5rem 7.5rem;
 }
 
-section {
+
+.download_mac {
+  flex-direction: column;
+  text-align: center;
+}
+
+.main_footer_book {
   margin: 5%;
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 @media (max-width: 1405px) {
@@ -382,10 +398,6 @@ section {
   }
 }
 
-.download_mac, .version {
-  flex-direction: column;
-  text-align: center;
-}
 
 .download_mac>button {
   border: #2a292b;
@@ -433,14 +445,22 @@ section {
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
-  width: 95%;
-  height: 30rem;
+  width: 99%;
+  max-height: 29rem;
+  display: grid;
+  padding: 5.3px 5.3px 66px 5.3px;
   background: black;
   border-radius: 1.8875rem;
   border: 1px solid rgb(24, 23, 23);
   box-shadow: inset 0 0 4px 2px #7f778a,
-    inset 0 0 0 4px #312a3a,
-    -10px -10px 10rem 1rem #96760d85;
+              inset 0 0 0 4px #312a3a,
+              -10px -10px 10rem 1rem #96760d85;
+  gap: 1px;
+  grid-template-rows: 16% auto 15.5%;
+  grid-template-columns: 15%;
+  grid-template-areas: "display_player display_track"
+                       "display_nav display_alboms"
+                       "display_nav display_controllers";
 }
 
 @media (max-width: 1328px) {
@@ -449,25 +469,13 @@ section {
   }
 }
 
-.book_display {
-  width: 99%;
-  max-height: 27.4rem;
-  margin: 6px;
-  display: grid;
-  gap: 1px;
-  grid-template-rows: 16% auto 15.5%;
-  grid-template-columns: 15%;
-  grid-template-areas: "display_player display_track"
-    "display_nav display_alboms"
-    "display_nav display_controllers";
-}
-
 
 
 .display_player {
   grid-area: display_player;
   background-color: #272727;
   border-radius: 1.5rem 0 0 0;
+  padding: 10%;
 }
 
 .display_player p {
@@ -492,9 +500,9 @@ section {
   background: rgb(255, 0, 0);
   border: .15rem solid #fa2702;
   border-radius: 50%;
-  box-shadow: 0 0 2.5rem #f50202a1,
-    2rem 2rem 5rem #fa5c00bd,
-    -2rem -2rem 4rem #ec1b1b4f,
+  box-shadow: 0 0 1rem #f50202a1,
+    1rem 1rem 4rem #fa5c00bd,
+    -1rem -.3rem 4rem #ec1b1b4f,
     inset 0 0 3rem #fa2702,
     inset 0 0 5rem #fa5e03b6;
 
@@ -515,7 +523,6 @@ section {
 
 .display_track_time {
   width: 75%;
-  justify-content: center
 }
 
 .display_track_time p {
@@ -665,7 +672,7 @@ section {
   background: radial-gradient(farthest-corner at 50%, #131212d8 10%, #2a292b 90%);
   border: #1d1c1c solid 2px;
   border-radius: 50%;
-  box-shadow: 1px 2px 10px #acabad7e;
+  box-shadow: 1px 1px 5px #acabad7e;
 
 }
 
@@ -772,13 +779,9 @@ footer a {
 
 
 .rights {
-  flex-direction: column;
   margin: 0 0 0 7.6rem;
 }
 
-.section_bot {
-  flex-wrap: nowrap;
-}
 
 .section_bot>h1 {
   font-family: Showcard Gothic;
