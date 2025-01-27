@@ -1,0 +1,86 @@
+.device {
+    position: relative;
+    width: 437px;
+}
+
+.device-body {
+    display: block;
+    box-sizing: border-box;
+    width: 420px;
+    height: 840px;
+    background: #000000;
+    border: 2px solid #1b1721;
+    border-radius: 68px;
+    box-shadow: inset 0 0 4px 2px #c0b7cd, inset 0 0 0 6px #342c3f, 12px 0px 60px 0 #e0dfe27d;
+    padding: 10px;
+}
+
+.device img {
+    width: 395px;
+    height: 815px;
+    border-radius: 55px;
+}
+
+.device-header {
+    background: #010101;
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    left: 38.5%;
+    top: 30px;
+    width: 100px;
+}
+
+.device-senser {
+    position: absolute;
+    background: radial-gradient(farthest-corner at 20% 20%, #6074bf 0, transparent 40%),
+    radial-gradient(farthest-corner at 80% 80%, #513785 0, #24555e 20%, transparent 50%);
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .05);
+    height: 9px;
+    left: 78%;
+    top: 11px;
+    width: 9px;
+}
+
+.device-power {
+    background: #1b1721;
+    border-radius: 2px;
+    height: 100px;
+    position: absolute;
+    right: 15px;
+    top: 200px;
+    width: 3px;
+}
+
+.device-voice {
+    background: #1b1721;
+    border-radius: 2px;
+    height: 32px;
+    left: -2px;
+    position: absolute;
+    top: 115px;
+    width: 3px;
+}
+
+.device-voice::before {
+    background: #1b1721;
+    border-radius: 2px;
+    content: "";
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 80px;
+    width: 3px;
+}
+
+.device-voice::after {
+    background: #1b1721;
+    border-radius: 2px;
+    content: "";
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 150px;
+    width: 3px;
+}
